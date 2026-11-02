@@ -586,7 +586,7 @@ def run_gui() -> None:
     )
 
     range_frame = ttk.LabelFrame(
-        frame, text="Start/Ende relativ zum Abfuhrtermin", padding=8
+        frame, text="Start/Ende der Erinnerung", padding=8
     )
     range_frame.grid(
         row=3, column=0, columnspan=3, sticky="ew", pady=(0, 12)
@@ -862,7 +862,7 @@ def run_gui() -> None:
         )
 
     ttk.Button(frame, text="Generieren", command=generate).grid(
-        row=7, column=1, sticky="w", padx=8, pady=(12, 0)
+        row=2, column=2, sticky="e", pady=(0, 12)
     )
     ttk.Label(frame, textvariable=status_var).grid(
         row=8, column=0, columnspan=3, sticky="w", pady=(12, 0)
