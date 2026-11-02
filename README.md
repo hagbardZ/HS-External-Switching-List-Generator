@@ -3,6 +3,8 @@
 A small Tkinter application that converts waste-collection schedules from
 AbfallPlus CSV or ICS exports into a HomeServer switching-list `.dat` file.
 
+![HS_ExternalSwitchingList_Generator GUI](screenshot.png)
+
 The generated list contains one reminder entry and one end entry per collection
 date:
 
@@ -75,7 +77,7 @@ Gelbe Tonne;Altpapier;Restmüll
 Standard iCalendar files with `VEVENT` blocks are supported. The event
 `SUMMARY` is used as the source name and `DTSTART` supplies the collection
 date. This works with exports such as
-`allestrassenunterkirnach26.ics`.
+`allestrassen2026.ics`.
 
 ## Default mappings
 
@@ -91,7 +93,7 @@ They are applied to CSV column headers or ICS event summaries.
 Three optional rows are available for additional event types, for example:
 
 ```bash
-python3 generate_muell_dat.py allestrassenunterkirnach26.ics \
+python3 generate_muell_dat.py allestrassen2026.ics \
   -o muell2026.dat \
   --extra1-search "Biomüll" \
   --extra1-name "Biomuell"
@@ -104,7 +106,7 @@ Each optional source search must be paired with an output name.
 - KNX group address: `115/1/1`
 - Start: one day before the collection date at `18:00`
 - End: on the collection date at `08:00`
-- Default input: `allestrassenunterkirnach2026a.csv`
+- Default input: `allestrassen2026.csv`
 - Default output: `muell2026.dat`
 
 ## Command-line usage

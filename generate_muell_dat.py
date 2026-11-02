@@ -726,12 +726,12 @@ def run_gui() -> None:
     preview.heading("waste", text="Bezeichnung (DAT)")
     preview.heading("start", text="Start")
     preview.heading("end", text="Ende")
-    preview.column("date", width=90, anchor="center", stretch=False)
-    preview.column("weekday", width=90, anchor="center", stretch=False)
-    preview.column("source", width=170, anchor="w", stretch=True)
+    preview.column("date", width=100, anchor="center", stretch=False)
+    preview.column("weekday", width=100, anchor="center", stretch=False)
+    preview.column("source", width=165, anchor="w", stretch=True)
     preview.column("waste", width=160, anchor="w", stretch=True)
-    preview.column("start", width=135, anchor="center", stretch=False)
-    preview.column("end", width=135, anchor="center", stretch=False)
+    preview.column("start", width=150, anchor="center", stretch=False)
+    preview.column("end", width=150, anchor="center", stretch=False)
     preview.grid(row=0, column=0, sticky="nsew")
 
     scrollbar = ttk.Scrollbar(
